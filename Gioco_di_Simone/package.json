@@ -1,0 +1,8 @@
+{
+	"name": "Gioco_di_Simone",
+	"version": "1.0.0",
+	"keywords": ["util", "functional", "server", "client", "browser"],
+	"author": "federico.rosato",
+	"contributors": [],
+	"dependencies": {}
+}

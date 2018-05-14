@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css"/>
+
+		<title>Gioco di Simone</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style>
+			.wrapper {
+				margin-right: auto; /* 1 */
+				margin-left:  auto; /* 1 */		
+
+				padding-right: 10px; /* 3 */
+				padding-left:  10px; /* 3 */
+				width: 50%; 
+				overflow: hidden;
+			}
+			
+			.textBox{
+				text-align: center;
+				
+				padding-left: 10px;
+				padding-right: 10px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				
+				border: 1px solid black;
+				width: 240px;
+			}
+			
+			.circle {
+				width: 100px;
+				height: 100px;
+				-webkit-border-radius: 50px;
+				-moz-border-radius: 50px;
+				border-radius: 50px;
+				border: 1px solid black;
+			}
+			
+			.box{
+				width: 80px;
+				height: 30px;
+				border: 1px solid black;
+			}
+			
+			.flex-container{
+				display: flex;
+				justify-content: space-around;
+				
+				padding-top: 20px;
+				padding-bottom: 20px;
+			}
+		</style>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+			<table class="wrapper">
+				<tr>
+					<th class="flex-container">
+						<div class="textBox" style="float: left">Livello raggiunto: </div>
+						<div class="textBox" style="float: right">Tempo Rimasto: </div>
+					</th>
+				</tr>
+				<tr>
+					<th class="flex-container">
+						<div class="circle" id="redCircle"></div>
+						<div class="circle" id="blueCircle"></div>
+						<div class="circle" id="greenCircle"></div>
+					</th>
+				</tr>
+				<tr>
+					<th class="flex-container">
+						<button class="box" id="redBtn" style="background-color: crimson" onclick="pushPlayerColor('red')"></button>
+						<button class="box" id="blueBtn" style="background-color: cornflowerblue" onclick="pushPlayerColor('blue')"></button>
+						<button class="box" id="greenBtn" style="background-color: green" onclick="pushPlayerColor('green')"></button>
+					</th>
+				</tr>
+				<tr>
+					<th class="flex-container">
+						<div id="displayBox" style="width: 50%; height: 40px; border: 1px solid black; display: flex;
+							 justify-content: center; align-items: center;"></div>
+					</th>
+				</tr>
+				<tr>
+					<th class="flex-container">
+						<button onclick="newGame()">Nuova partita</button>
+					</th>
+				</tr>
+			</table>
+	</body>
+</html>
