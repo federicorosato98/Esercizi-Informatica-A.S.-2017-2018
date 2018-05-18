@@ -1,0 +1,13 @@
+file
+contenente
+un
+certo
+numero
+di
+parole
+a
+scopo
+di
+testare
+il
+programma

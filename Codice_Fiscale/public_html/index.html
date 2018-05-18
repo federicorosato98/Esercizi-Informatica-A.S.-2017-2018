@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>Calcolatore codice fiscale</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			table {
+				font-family: arial, sans-serif;
+				border-collapse: collapse;
+				width: 50%;
+				max-width: 500px;
+				margin: auto;
+			}
+			
+			td, tr{
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+				max-width:100%;
+				white-space:nowrap;
+			}
+			
+			.center {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 20%;
+			}
+		</style>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<table>
+			<caption>Calcolatore Codice Fiscale</caption>
+			<tr>
+				<td> 
+					Nome: <input id="nome">
+				</td>
+				<td>
+					Cognome: <input id="cognome">
+				</td>
+		
+			</tr>
+			<tr>
+				<td>
+					Luogo di nascita: <input id ="luogo">
+				</td>
+				<td>
+					Provincia: <input id ="provincia">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Data di nascita:
+					<select id ="giorno">					
+					</select>
+
+					<select id ="mese" onchange="">
+					</select>
+
+					<input placeholder="Anno" id="anno">
+				</td>
+				<td>
+					Sesso: <select id="sesso">
+						<option id="m">M</option>
+						<option id="f">F</option>
+					</select>
+				</td>		
+			</tr>
+			<tr>
+			<image src="download.jfif" class="center">	</image>
+			</tr>
+		</table>
+		<button class="center">Calcola</button>
+	</body>
+</html>
