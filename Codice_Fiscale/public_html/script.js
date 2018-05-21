@@ -15,20 +15,70 @@ function fill(){
 	for(var i=0; i<=11; i++){		
 		
 		newMese = document.createElement("option");
-		newMese.value = mesi_giorni[i].mese.toString();
+		newMese.value = i;
 		newMese.innerHTML= mesi_giorni[i].mese.toString();
 		meseSelect.appendChild(newMese);
 		
-		for (var j = 1; j <= mesi_giorni[i].giorni; j++) {
-			newGiorno = document.createElement("option");
-			newGiorno.value = j.toString();
-			newGiorno.innerHTML = j.toString();
-			giornoSelect.appendChild(newGiorno);
-		}		
+		riempiGiorni();
 	}
 };
 
 function riempiGiorni(){
-	
+	removeOptions(document.getElementById('giorno'));
+	var newGiorno;
+	for (var j = 1; j <= mesi_giorni[document.getElementById('mese').value].giorni; j++) {
+		newGiorno = document.createElement("option");
+		newGiorno.value = j.toString();
+		newGiorno.innerHTML = j.toString();
+		document.getElementById('giorno').appendChild(newGiorno);
+	}
 };
 
+function removeOptions(selectbox)
+{
+    var i;
+    for(i = selectbox.options.length - 1 ; i >= 0 ; i--)
+    {
+        selectbox.remove(i);
+    }
+}
+function calc(){
+	
+	//cognome
+	var cognome = document.getElementById("cognome").value;
+	if(isNumeric(cognome)){
+		window.alert("Il cognome contiene numeri!");
+	}else{
+		
+	}
+	
+	//nome
+	var nome = document.getElementById("nome").value;
+	if(isNumeric(nome)){
+		window.alert("Il nome contiene numeri!");
+	}else{
+		
+	}
+}
+
+function isNumeric(n) {
+	//questa funzione returna true se la stringa passata come parametro contiene dei numeri, false nel caso contrario
+	var isNumeric = false;
+	for (var i = 0; i < n.length; i++) {
+		if(!isNaN(n.charAt(i)))
+			isNumeric = true;
+	}
+	return isNumeric;
+}
+
+function findConsonanti(stringa){
+	var consonanti = /^[a-zA-Z]+$/;
+	var trovate = "";
+
+	for (var i = 0; i <= stringa.length; i++) {
+		if(consonanti.test(stringa[i]))
+			trovate += stringa[i];
+	}
+	
+	return trovate;
+}
