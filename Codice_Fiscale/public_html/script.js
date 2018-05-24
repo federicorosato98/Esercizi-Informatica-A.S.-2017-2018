@@ -49,7 +49,7 @@ function calc(){
 	if(isNumeric(cognome)){
 		window.alert("Il cognome contiene numeri!");
 	}else{
-		
+		cognome = findConsonanti(cognome);
 	}
 	
 	//nome
@@ -57,7 +57,7 @@ function calc(){
 	if(isNumeric(nome)){
 		window.alert("Il nome contiene numeri!");
 	}else{
-		
+		nome = findConsonanti(nome);
 	}
 }
 
@@ -72,12 +72,19 @@ function isNumeric(n) {
 }
 
 function findConsonanti(stringa){
-	var consonanti = /^[a-zA-Z]+$/;
-	var trovate = "";
+	var consonanti = /[qwrtypsdfghjklzxcvbnmQWRTYPSDFGHJKLZXCVBNM]/;
+	var trovate = [];
 
-	for (var i = 0; i <= stringa.length; i++) {
-		if(consonanti.test(stringa[i]))
-			trovate += stringa[i];
+	for (var i = 0; i < stringa.length; i++) {
+		if(consonanti.test(stringa[i]) && trovate.length < 3)
+			trovate.push(stringa[i].toUpperCase());
+	}
+	
+	if(trovate.length < 3){
+		for (var j = 0; j < stringa.length; j++) {
+			if (/^[a-zA-Z]+$/.test(stringa[j]) && trovate.length < 3)
+				trovate.push(stringa[j].toUpperCase());
+		}
 	}
 	
 	return trovate;
