@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>Convertitore di valuta</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style>
+			.wrapper{
+				margin-right: auto; /* 1 */
+				margin-left:  auto; /* 1 */		
+				
+				padding-top: 100px;
+				padding-right: 1px; /* 3 */
+				padding-left:  1px; /* 3 */
+				width: 300px; 			
+			}
+
+			table, tr, td{
+				/*border: 1px solid black;*/
+			}
+
+			.btn {
+				height: 78px; 
+				width: 78px;   
+				display: inline-block;
+				background-image:url('button.png');
+				background-repeat:no-repeat;		
+			}
+
+			.textbox{
+				width: 100%;
+			}
+
+		</style>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body>
+		<table class="wrapper">
+			<tr>
+				<td colspan="2" >
+					<input class="textbox" id="input" placeholder="Da convertire"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<select class="textbox" id="val1"></select>
+				</td>
+				<td rowspan="2">
+					<input class="btn" type="button"/>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 100%">
+					<select class="textbox" id="val2"></select>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 100%">
+					<input class="textbox" id="ris" placeholder="Risultato"/>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
