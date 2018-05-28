@@ -38,7 +38,7 @@ and open the template in the editor.
 			}
 
 		</style>
-		<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js"></script>	
 	</head>
 	<body>
 		<table class="wrapper">
@@ -52,7 +52,7 @@ and open the template in the editor.
 					<select class="textbox" id="val1"></select>
 				</td>
 				<td rowspan="2">
-					<input class="btn" type="button"/>
+                                    <input class="btn" type="button" onclick="javascript:converti(input.value);"/>
 				</td>
 			</tr>
 			<tr>
@@ -61,10 +61,11 @@ and open the template in the editor.
 				</td>
 			</tr>
 			<tr>
-				<td style="width: 100%">
+				<td width = "100%">
 					<input class="textbox" id="ris" placeholder="Risultato"/>
-				</td>
+                                </td>
 			</tr>
 		</table>
+            
 	</body>
 </html>
